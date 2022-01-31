@@ -24,8 +24,7 @@ function App() {
             <Nav.Link href="#features">Today's Deal</Nav.Link>
             <Nav.Link href="#features">About us</Nav.Link>
           </Nav>  
-        </NavbarCollapse>  
-       
+        </NavbarCollapse>         
       </Navbar>
       <header className="App-header">
         
