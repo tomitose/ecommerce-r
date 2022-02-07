@@ -3,11 +3,13 @@ import logo from '../logo.svg';
 import { Navbar, Nav , NavDropdown} from 'react-bootstrap';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import CartWidget from "./CartWidget";
 
 
 const NavBar = () => {
   return (
     <Navbar bg="success" variant="dark" expand="sm" collapseOnSelect>
+
       <Navbar.Brand href="#home">
         <img src={logo} className="App-logo" alt="logo" />
       </Navbar.Brand>
@@ -24,6 +26,9 @@ const NavBar = () => {
           <Nav.Link href="#features">About us</Nav.Link>
         </Nav>
       </NavbarCollapse>
+
+    <CartWidget/>
+
     </Navbar>
   );
 };
