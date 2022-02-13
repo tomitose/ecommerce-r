@@ -31,6 +31,18 @@
 
 
 
+
+/* CARD */
+
+.card-text{
+    text-align: initial;
+    padding-left: 20px;
+}
+
+
+
+
+
 /*
 Media-Query
 */

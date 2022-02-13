@@ -2,19 +2,22 @@ import React from "react";
 import { Card } from 'react-bootstrap';
 import ItemCount from "./ItemCount";
 
-const Cards = ({title}) => {
+
+const Item = ({prod}) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <div>
+    <Card style={{ width: "20rem" }}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title>{prod.name}</Card.Title>
         <Card.Text>
           Cantidad
         </Card.Text>
-        <ItemCount initial= {1}/>
+        <ItemCount stock={6} initial= {1}/>
       </Card.Body>
     </Card>
+    </div>
   );
 };
 
-export default Cards;
+export default Item;
