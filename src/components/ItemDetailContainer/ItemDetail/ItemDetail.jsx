@@ -1,24 +1,24 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
+import ItemCount from "../../ItemCount";
 
-const ItemDetail = ( {item}) => {
+const ItemDetail = ( {detail}) => {
   return (
     <div>
-      <Row xs={1} md={2} className="g-4">
           <Col>
             <Card>
-              <Card.Img  src={item.img}/>
+              <Card.Img  src={detail.img}/>
               <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
+                <Card.Title>{detail.name}</Card.Title>
                 <Card.Text>
                   This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.{item.price}
+                  lead-in to additional content.{detail.price}
                 </Card.Text>
+                <Card.Subtitle style={{ textAlign:"start", paddingLeft:"30px" }}>Precio: ${detail.price}</Card.Subtitle>
+                <ItemCount stock={detail.stock} initial={1} />
               </Card.Body>
             </Card>
           </Col>
-      </Row>
     </div>
   );
 };

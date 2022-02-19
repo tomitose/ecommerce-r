@@ -1,18 +1,20 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-const Item = ({ name,price,stock,img }) => {
+const Item = ({ prod }) => {
   return (
     <div>
         <Card style={{ width: "20rem" }}>
-          <Card.Img src={img} />
+          <Card.Img src={prod.img} />
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title>{prod.name}</Card.Title>
             <Card.Text>Cantidad</Card.Text>
-            <ItemCount stock={stock} initial={1} />
+            <ItemCount stock={prod.stock} initial={1} />
           </Card.Body>
-          <Card.Subtitle style={{ textAlign:"start", paddingLeft:"30px" }}>Precio: ${price}</Card.Subtitle>
+          <Card.Subtitle style={{ textAlign:"start", paddingLeft:"30px" }}>Precio: ${prod.price}</Card.Subtitle>
+          <Link to={`/product/${prod.id}`}> <Button variant="success">Info</Button> </Link>
         </Card>
     </div>
   );

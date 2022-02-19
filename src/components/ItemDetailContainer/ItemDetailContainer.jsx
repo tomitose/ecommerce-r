@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getFetch } from "../services/getFetch";
 import ItemDetail from "./ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([]);
 
+    const {productId} = useParams();
+
   useEffect(() => {
-    getFetch.then((res) => {
-      setDetail(res);
+
+    getFetch
+    .then((response) => {
+      setDetail(response.find( prod=>prod.id === productId ));
     });
-  }, []);
+
+  }, [productId]);
 
   return (
     <div>
-      <ItemDetail detail={detail}/>
+      <ItemDetail detail={detail} />
     </div>
   );
 };
