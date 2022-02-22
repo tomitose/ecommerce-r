@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect,useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import { getFetch } from "../services/getFetch";
 import './ItemListContainer.css';
@@ -8,7 +8,7 @@ import './ItemListContainer.css';
 const ItemListContainer = () => {
   const [product, setProduct] = useState([]);
 
-  const {categoryId} = useSearchParams();
+  const {categoryId} = useParams();
 
   useEffect(() => {
 
