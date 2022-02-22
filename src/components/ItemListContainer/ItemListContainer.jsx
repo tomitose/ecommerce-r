@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect,useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import ItemList from "../ItemList/ItemList";
 import { getFetch } from "../services/getFetch";
-import ItemList from "../ItemList";
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [product, setProduct] = useState([]);
@@ -31,8 +32,8 @@ const ItemListContainer = () => {
   
 
   return (
-    <div>
-      <ItemList product={product}/>
+    <div className="Card-Item-List-Container">
+      <ItemList  product={product}/>
     </div>
   )
 

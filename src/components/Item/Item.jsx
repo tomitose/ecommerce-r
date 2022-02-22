@@ -1,12 +1,14 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount";
+import './Item.css';
+
 
 const Item = ({ prod }) => {
   return (
     <div>
-        <Card style={{ width: "20rem" }}>
+        <Card style={{ width: "20rem"}}>
           <Card.Img src={prod.img} />
           <Card.Body>
             <Card.Title>{prod.name}</Card.Title>

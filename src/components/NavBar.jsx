@@ -16,11 +16,11 @@ const NavBar = () => {
       <NavbarToggle />
       <NavbarCollapse>
         <Nav>
-          <Nav.Link href="#home">Home</Nav.Link>
-          <NavDropdown title="Products" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Shoes</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">T-Shirts</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">Jeans</NavDropdown.Item>
+          <Nav.Link href="/">Home</Nav.Link>
+          <NavDropdown title="Models" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Vans</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.1">Nike</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.1">Adidas</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="#features">Today's Deal</Nav.Link>
           <Nav.Link href="#features">About us</Nav.Link>
