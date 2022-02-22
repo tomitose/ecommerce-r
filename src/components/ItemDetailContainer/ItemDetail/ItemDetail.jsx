@@ -6,8 +6,8 @@ const ItemDetail = ( {detail}) => {
   return (
     <div>
           <Col>
-            <Card>
-              <Card.Img  src={detail.img}/>
+            <Card style={{ flexDirection: "row", alignItems: "center"}}>
+              <Card.Img  src={detail.img} style={{ width:"500px" }}/>
               <Card.Body>
                 <Card.Title>{detail.name}</Card.Title>
                 <Card.Text>
