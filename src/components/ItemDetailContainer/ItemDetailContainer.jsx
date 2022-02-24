@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
 
     getFetch
     .then((response) => {
-      setDetail(response.find( prod=>prod.id === Number(productId) ));
+      setDetail(response.find( prod => prod.id === Number(productId) ));
     });
 
   }, [productId]);
