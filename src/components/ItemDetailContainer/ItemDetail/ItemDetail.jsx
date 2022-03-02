@@ -4,6 +4,8 @@ import ItemCount from "../../ItemCount";
 
 const ItemDetail = ({ detail }) => {
 
+
+
   return (
     <div>
       <Card className="border border-success" style={{ flexDirection: "row", alignItems: "center", marginTop: "20px"}}>
