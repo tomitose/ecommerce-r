@@ -7,6 +7,7 @@ import "./ItemDetail.css";
 const ItemDetail = ({ detail }) => {
 
   const [count, setCount] = useState (0);
+  
   const {cartList, showList,addToCart} = useCartContext()
   console.log(showList)
 
@@ -15,7 +16,8 @@ const ItemDetail = ({ detail }) => {
     addToCart({detail, count: cant})
     console.log (cartList)
   }
-      console.log(count)
+  
+  console.log(count)
 
 
   return (

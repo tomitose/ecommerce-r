@@ -8,7 +8,7 @@ import CartWidget from "./CartWidget";
 const NavBar = () => {
   return (
     <Navbar bg="success" variant="dark" expand="sm" collapseOnSelect>
-      <Navbar.Brand href="#home" style={{ marginLeft: "20px" }}>
+      <Navbar.Brand href="/" style={{ marginLeft: "20px" }}>
         <GiConverseShoe />
       </Navbar.Brand>
       <NavbarToggle />
