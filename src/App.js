@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import CartContextProvider from "./components/CartContext";
 import Cart from "./components/Cart";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
   return (

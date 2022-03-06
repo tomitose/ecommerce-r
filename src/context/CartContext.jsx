@@ -14,11 +14,25 @@ const CartContextProvider = ({children}) => {
             items
         ])
     }
+// function addItem (item, quantity)
 
+// function removeItem(itemId)
+
+// function clear()
+
+
+/*
+    function isInCart (id) {
+        if(id ){
+            true
+        }
+        else{false}
+    }
+*/
     const showList = ()=>{
     console.log(cartList)
     }
-    
+
 
   return (
     <CartContext.Provider value={{

@@ -8,6 +8,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   const [changeButton, setChangeButton] = useState(false);
 
+
   function counter() {
       setContador (contador+1) 
       if (contador >= stock) {
@@ -18,8 +19,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   function decrement () {
     setContador (contador -1)
-    if (contador <= 0) {
-      setContador(0);
+    if (contador <= 1) {
+      setContador(1);
     }
   };
 
@@ -27,6 +28,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
     onAdd(contador)
     setContador(initial)
     setChangeButton(true)
+
     if (contador === 0){
       return contador
     }else
@@ -47,8 +49,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
           <Button style={{alignSelf: "center", marginLeft:"30px"}}>Buy</Button>
         </Link>
         : <Button onClick={() => handlerOnAdd()} style={{alignSelf: "center", marginLeft:"30px"}}>Add to Cart</Button>
-      }
-      
+      }      
     </div>
   );
 };
