@@ -46,7 +46,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
       { changeButton 
         ?  
         <Link to={"/cart"}>
-          <Button style={{alignSelf: "center", marginLeft:"30px"}}>Buy</Button>
+          <Button style={{alignSelf: "center", marginLeft:"30px"}}>Buy Now</Button>
         </Link>
         : <Button onClick={() => handlerOnAdd()} style={{alignSelf: "center", marginLeft:"30px"}}>Add to Cart</Button>
       }      
