@@ -1,41 +1,29 @@
 import React from "react";
-import { useEffect,useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import useFireStore from "../../hooks/useFireStore";
 import ItemList from "../ItemList/ItemList";
-import { getFetch } from "../services/getFetch";
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
-  const [product, setProduct] = useState([]);
 
-  const {categoryId} = useParams();
+  const {product,getData} = useFireStore () 
 
-  useEffect(() => {
+  useEffect(() =>{
 
-    if(categoryId) {
-      getFetch
-      .then (res => {
-        setProduct(res.filter(prod => prod.category === categoryId))
-      })
-      .catch (error => alert( "Error:", error));
-    }
-
-    else{     
-      getFetch 
-      .then ( res => {
-        setProduct(res)
-      })
-      .catch (error => alert( "Error:", error));
-    }
-  },[categoryId])
-    
-  
+    getData();
+  }, [])
 
   return (
     <div className="Card-Item-List-Container">
-      <ItemList  product={product}/>
+      <ItemList product={product}/>
     </div>
   )
 
-  }
+}
+
 export default ItemListContainer;
+
+
+
+
+

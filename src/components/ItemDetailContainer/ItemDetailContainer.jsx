@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../services/getFetch";
 import ItemDetail from "./ItemDetail/ItemDetail";
+import useFireStore from "../../hooks/useFireStore";
 
 const ItemDetailContainer = () => {
-    const [detail, setDetail] = useState([]);
 
     const {productId} = useParams();
 
+    const {detailIndividual, getDataDetail} = useFireStore ();
+
   useEffect(() => {
 
-    getFetch
-    .then((response) => {
-      setDetail(response.find( prod => prod.id === Number(productId) ));
-    });
+  getDataDetail (productId)
 
-  }, [productId]);
+  },[productId]);
+
+
 
   return (
     <div>
-      {detail&& <ItemDetail detail={detail} />}
+      {detailIndividual&&<ItemDetail detail={detailIndividual} />}
     </div>
   );
 };
