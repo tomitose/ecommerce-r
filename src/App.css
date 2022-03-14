@@ -8,11 +8,12 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CartLogo {
+  margin-right: 10px;
+
 }
+
+
 
 
 .App-link {
@@ -25,5 +26,29 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* CARD */
+
+.card-text{
+    text-align: initial;
+    padding-left: 20px;
+}
+
+
+
+
+
+/*
+Media-Query
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
