@@ -39,8 +39,7 @@ const ItemDetail = ({ detail }) => {
         <Card.Body className="CardItems">
           <Card.Title>{detail.name}</Card.Title>
           <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content.
+            {detail.description}
           </Card.Text>
           <Card.Subtitle style={{ textAlign: "start", paddingLeft: "30px" }}>
             Price: ${detail.price}

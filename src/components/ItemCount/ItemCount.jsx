@@ -37,18 +37,18 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   return (
     <div className="ButtonAdd">
-      <Button onClick={() => decrement()}>-</Button>
-      <h3 type="number" style={{ width: "40px"}}>
+      <Button variant="success" onClick={() => decrement()}>-</Button>
+      <h3 type="number"  style={{ width: "40px"}}>
         {contador}
       </h3> 
-      <Button onClick={() => counter()}>+</Button>
+      <Button variant="success" onClick={() => counter()}>+</Button>
 
       { changeButton 
         ?  
         <Link to={"/cart"}>
-          <Button style={{alignSelf: "center", marginLeft:"30px"}}>Buy Now</Button>
+          <Button variant="success" style={{alignSelf: "center", marginLeft:"30px"}}>Buy Now</Button>
         </Link>
-        : <Button onClick={() => handlerOnAdd()} style={{alignSelf: "center", marginLeft:"30px"}}>Add to Cart</Button>
+        : <Button variant="success" onClick={() => handlerOnAdd()} style={{alignSelf: "center", marginLeft:"30px"}}>Add to Cart</Button>
       }      
     </div>
   );
