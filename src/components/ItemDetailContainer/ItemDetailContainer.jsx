@@ -13,13 +13,13 @@ const ItemDetailContainer = () => {
 
   getDataDetail (productId)
 
-  },[]);
+  },[productId]);
 
 
 
   return (
     <div>
-      {<ItemDetail detail={detailIndividual} />}
+      {detailIndividual&&<ItemDetail detail={detailIndividual} />}
     </div>
   );
 };
