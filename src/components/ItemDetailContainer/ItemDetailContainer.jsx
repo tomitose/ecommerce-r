@@ -1,44 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-//import { getFetch } from "../services/getFetch";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getDoc,doc} from "firebase/firestore";
-import db from "../services/firebase";
+import useFireStore from "../../hooks/useFireStore";
 
 const ItemDetailContainer = () => {
-    const [detail, setDetail] = useState([]);
 
     const {productId} = useParams();
 
-    const getDataDetail = async (id) => {
-      try {
-        const document = doc(db, "items", id);
-        const resp = await getDoc(document);
-        const result = { id: resp.id, ...resp.data() };
-        setDetail(result);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+    const {detailIndividual, getDataDetail} = useFireStore ();
 
   useEffect(() => {
-/*
-    getFetch
-    .then((response) => {
-      setDetail(response.find( prod => prod.id === Number(productId) ));
-    });
-*/
+
   getDataDetail (productId)
 
-  }, [productId]);
+  },[]);
 
-
-  
 
 
   return (
     <div>
-      {detail&& <ItemDetail detail={detail} />}
+      {<ItemDetail detail={detailIndividual} />}
     </div>
   );
 };
