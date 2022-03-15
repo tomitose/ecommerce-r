@@ -7,41 +7,48 @@ import accounting from "accounting";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ detail }) => {
+  const [count, setCount] = useState(0);
 
-  const [count, setCount] = useState (0);
+  const [loading, setLoading] = useState(true);
 
-  const [loading, setLoading] = useState (true);
-  
-  const {cartList, showList,addToCart} = useCartContext()
-  console.log(showList)
+  const { cartList, showList, addToCart } = useCartContext();
+  console.log(showList);
 
   const onAdd = (cant) => {
-    setCount(cant)
-    addToCart({detail, count: cant})
-    console.log (cartList)
-  }
+    setCount(cant);
+    addToCart({ detail, count: cant });
+    console.log(cartList);
+  };
 
-  useEffect (() => {
-    setTimeout (() => {
-      setLoading (false)
-    },1500);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
     return () => {
-      setLoading(true)
-    }
-  }, [])
-  
-  console.log(count)
+      setLoading(true);
+    };
+  }, []);
 
+  console.log(count);
 
   return (
     <div>
-      <Card className="border border-success cardCustom" style={{ alignItems: "center", marginTop: "20px"}}>
-        {loading ?  <h5 style={{color:"green", paddingLeft:"10px"}}> ... Loading</h5>: <Card.Img src={detail.img} className="CardImage" />}
+      <Card
+        className="border border-success cardCustom"
+        style={{ alignItems: "center", marginTop: "20px" }}
+      >
+        {loading ? (
+         <div class="text-center" style={{ marginLeft: "150px",marginRight: "150px" }}>
+         <div class="spinner-border text-success" role="status">
+           <span class="visually-hidden">Loading...</span>
+         </div>
+       </div>
+        ) : (
+          <Card.Img src={detail.img} className="CardImage" />
+        )}
         <Card.Body className="CardItems">
           <Card.Title>{detail.name}</Card.Title>
-          <Card.Text>
-            {detail.description}
-          </Card.Text>
+          <Card.Text>{detail.description}</Card.Text>
           <Card.Subtitle style={{ textAlign: "start", paddingLeft: "30px" }}>
             Price: {accounting.formatMoney(detail.price)}
           </Card.Subtitle>
