@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 import "./ItemCount.css";
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({initial, stock, onAdd, items}) => {
   const [contador, setContador] = useState(initial);
 
   const [changeButton, setChangeButton] = useState(false);
+
+  const {addToCart} = useCartContext ()
 
 
   function counter() {
@@ -28,6 +31,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
     onAdd(contador)
     setContador(initial)
     setChangeButton(true)
+    addToCart(items)
 
     if (contador === 0){
       return contador
