@@ -3,7 +3,6 @@ import { Card } from "react-bootstrap";
 import { useCartContext } from "../../../context/CartContext";
 import ItemCount from "../../ItemCount/ItemCount";
 import accounting from "accounting";
-//import LoadingButton from '@mui/lab/LoadingButton';  <LoadingButton loading loadingIndicator="Loading..." variant="outlined"/>
 import "./ItemDetail.css";
 
 const ItemDetail = ({ detail }) => {
@@ -16,7 +15,7 @@ const ItemDetail = ({ detail }) => {
 
   const onAdd = (cant) => {
     setCount(cant);
-    addToCart({ detail, count: cant });
+    addToCart({ ...detail, count: cant });
     console.log(cartList);
   };
 
