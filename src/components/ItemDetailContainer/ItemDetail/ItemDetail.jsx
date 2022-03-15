@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { useCartContext } from "../../../context/CartContext";
 import ItemCount from "../../ItemCount/ItemCount";
+import accounting from "accounting";
 //import LoadingButton from '@mui/lab/LoadingButton';  <LoadingButton loading loadingIndicator="Loading..." variant="outlined"/>
 import "./ItemDetail.css";
 
@@ -34,7 +35,7 @@ const ItemDetail = ({ detail }) => {
 
   return (
     <div>
-      <Card className="border border-success" style={{ flexDirection: "row", alignItems: "center", marginTop: "20px"}}>
+      <Card className="border border-success cardCustom" style={{ alignItems: "center", marginTop: "20px"}}>
         {loading ?  <h5 style={{color:"green", paddingLeft:"10px"}}> ... Loading</h5>: <Card.Img src={detail.img} className="CardImage" />}
         <Card.Body className="CardItems">
           <Card.Title>{detail.name}</Card.Title>
@@ -42,7 +43,7 @@ const ItemDetail = ({ detail }) => {
             {detail.description}
           </Card.Text>
           <Card.Subtitle style={{ textAlign: "start", paddingLeft: "30px" }}>
-            Price: ${detail.price}
+            Price: {accounting.formatMoney(detail.price)}
           </Card.Subtitle>
           <ItemCount stock={detail.stock} initial={1} onAdd={onAdd} />
         </Card.Body>
