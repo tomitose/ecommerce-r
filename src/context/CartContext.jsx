@@ -16,7 +16,7 @@ const CartContextProvider = ({children}) => {
     }
 // function addItem (item, quantity)
 
-// function removeItem(itemId)
+//function removeItem(itemId)
 
 // function clear()
 
