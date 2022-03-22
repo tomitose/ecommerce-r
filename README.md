@@ -1,3 +1,8 @@
+# This Proyect
+
+This Proyect is made in React about an Ecommerce of Shoes, where yo can buy any product of your choice and finaly get the order.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

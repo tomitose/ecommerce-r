@@ -1,13 +1,14 @@
 import React from "react";
 import { GiConverseShoe } from "react-icons/gi";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import 'typeface-raleway';
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
-    <Navbar bg="success" variant="dark" expand="sm" collapseOnSelect>
+    <Navbar bg="success" variant="dark" expand="sm" collapseOnSelect style={{fontFamily:"raleway"}}>
       <Navbar.Brand href="/" style={{ marginLeft: "20px" }}>
         <GiConverseShoe />
       </Navbar.Brand>
@@ -20,8 +21,7 @@ const NavBar = () => {
             <NavDropdown.Item href="#action/3.1">Nike</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.1">Adidas</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#features">Today's Deal</Nav.Link>
-          <Nav.Link href="#features">About us</Nav.Link>
+          <Nav.Link href="/Deals">Today's Deal</Nav.Link>
         </Nav>
       </NavbarCollapse>
 

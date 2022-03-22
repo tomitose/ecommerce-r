@@ -1,34 +1,27 @@
 .cardContainer {
-    max-width: 1000px;
     margin: 20px;
 }
 
 
-.cardName {
-    text-align: initial;
-
+.cardAmount {
+    font-size: large;
 }
 
-.cardItemsCont{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: baseline;
+.cardTotal {
+    font-size: large;
 }
+
 
 
 .trashButton{
-    margin-top: 30px;
-    width: max-content;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
 
-
-
-@media (min-width: 768px){
-    .col-md-8 {
-        flex: 0 0 auto;
+@media (max-width: 540px){
+    .cardContainer {
+        text-align: -webkit-center;
     }
 }
