@@ -38,7 +38,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   return (
     <div className="ButtonAdd">
-      <Button variant="success" onClick={() => decrement()}>-</Button>
+      <Button variant="success" className="Decrement" onClick={() => decrement()}>-</Button>
       <h3 type="number"  style={{ width: "40px"}}>
         {contador}
       </h3> 
