@@ -1,10 +1,13 @@
 import React from "react";
 import { GiConverseShoe } from "react-icons/gi";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import 'typeface-raleway';
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget";
+import { Link } from "react-router-dom";
+import "./NavBar.css"
+import 'typeface-raleway';
+
 
 const NavBar = () => {
   return (
@@ -14,14 +17,14 @@ const NavBar = () => {
       </Navbar.Brand>
       <NavbarToggle />
       <NavbarCollapse>
-        <Nav>
-          <Nav.Link href="/">Home</Nav.Link>
-          <NavDropdown title="Models" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Vans</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">Nike</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">Adidas</NavDropdown.Item>
+        <Nav style={{alignItems:"center"}}>
+          <Link to={"/"} className="Btn">Home</Link>
+          <NavDropdown title="Models" className="DropDownBtn" id="basic-nav-dropdown">
+            <Link className="BtnDrop" to={"/category/vans"} >Vans</Link>
+            <Link className="BtnDrop" to={"/category/nike"}>Nike</Link>
+            <Link className="BtnDrop" to={"/category/adidas"}>Adidas</Link>
           </NavDropdown>
-          <Nav.Link href="/Deals">Today's Deal</Nav.Link>
+          <Link className="Btn" to={"/deals"}>Today's Deal</Link>
         </Nav>
       </NavbarCollapse>
 

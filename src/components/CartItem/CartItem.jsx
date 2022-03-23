@@ -36,9 +36,8 @@ const CartItem = ({ items }) => {
                 </IconButton>
               </Stack>
       </Card>
+      
     </div>
-
-
 
 
   );
