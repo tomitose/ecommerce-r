@@ -12,7 +12,7 @@ import { useCartContext } from "../../context/CartContext";
 
 const CartItem = ({ items }) => {
 
-  const{removeItem,clearCart} = useCartContext()
+  const{removeItem} = useCartContext()
 
   return (
     <div className="cardContainer">
@@ -41,7 +41,7 @@ const CartItem = ({ items }) => {
           spacing={1}
         >
           <IconButton aria-label="delete" size="large">
-            <DeleteIcon onClick={() => clearCart()} fontSize="inherit" />
+            <DeleteIcon onClick={() => removeItem(items.id)} fontSize="inherit" />
           </IconButton>
         </Stack>
       </Card>
