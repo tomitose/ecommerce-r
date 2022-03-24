@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function FullWidthTextField() {
+export default function Checkout() {
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ export default function FullWidthTextField() {
       <TextField style={{marginTop:"20px"}} fullWidth label="Adress:" />
       <TextField style={{marginTop:"20px"}} fullWidth label="E-mail:" />
 
-      <Button style={{marginTop:'20px'}} variant="contained" color='success' >Buy order</Button>
+      <Button style={{marginTop:'20px'}} variant="contained" color='success' >Buy</Button>
 
     </Box>
   );

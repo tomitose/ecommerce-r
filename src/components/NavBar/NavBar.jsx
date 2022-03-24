@@ -12,7 +12,7 @@ import 'typeface-raleway';
 const NavBar = () => {
   return (
     <Navbar bg="success" variant="dark" expand="sm" collapseOnSelect style={{fontFamily:"raleway"}}>
-      <Navbar.Brand href="/" style={{ marginLeft: "20px" }}>
+      <Navbar.Brand style={{ marginLeft: "20px" }}>
         <GiConverseShoe />
       </Navbar.Brand>
       <NavbarToggle />

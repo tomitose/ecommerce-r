@@ -2,6 +2,7 @@ import { useCartContext } from "../context/CartContext";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import CartItem from "./CartItem/CartItem";
+import CartItemTotal from "./CartItem/CartItemTotal/CartItemTotal";
 
 const Cart = () => {
   const { cartList } = useCartContext();
@@ -15,6 +16,9 @@ const Cart = () => {
       ) : (
         cartList.map((items) => <CartItem key={items.id} items={items} />)
       )}
+
+      {cartList.length < 1 ? (<></>) : (<CartItemTotal/> )}
+       
     </div>
   );
 };

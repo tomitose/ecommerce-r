@@ -1,16 +1,16 @@
 import React from "react";
-import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';   
+import Stack from "@mui/material/Stack";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 import "./CartItem.css";
+
 
 const CartItem = ({ items }) => {
   return (
-
     <div className="cardContainer">
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -20,26 +20,29 @@ const CartItem = ({ items }) => {
           alt="green iguana"
         />
         <CardContent>
-          <Typography  gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {items.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Amount: {items.length}
           </Typography>
-        <Typography variant="body3" color="text.secondary">
-          Total price: ${items.price}
+          <Typography variant="body3" color="text.secondary">
+            Total price: ${items.price}
           </Typography>
-        </CardContent>  
-              <Stack className="trashButton" direction="row" alignItems="center" spacing={1}>
-                <IconButton aria-label="delete" size="large">
-                  <DeleteIcon fontSize="inherit" />
-                </IconButton>
-              </Stack>
+        </CardContent>
+        <Stack
+          className="trashButton"
+          direction="row"
+          alignItems="center"
+          spacing={1}
+        >
+          <IconButton aria-label="delete" size="large">
+            <DeleteIcon fontSize="inherit" />
+          </IconButton>
+        </Stack>
       </Card>
-      
+
     </div>
-
-
   );
 };
 
