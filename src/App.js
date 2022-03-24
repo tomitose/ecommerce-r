@@ -10,6 +10,7 @@ import CartContextProvider from "./context/CartContext";
 import Deals from "./pages/Deals";
 import Home from "./pages/Home";
 import Checkout from "./components/Checkout/Checkout";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/cart" element={<Cart />}/>
             <Route path="/checkout" element={<Checkout/>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>
         </CartContextProvider>
     </div>

@@ -8,10 +8,10 @@ const Cart = () => {
   const { cartList } = useCartContext();
 
   return (
-    <div>
+    <div style={{minHeight:"100vh"}}>
       {cartList.length < 1 ? (
         <Stack sx={{ width: "100%" }} spacing={2} style={{display:"flex", alignItems:"center", marginTop:"200px"}}>
-          <Alert severity="info" style={{alignSelf:"center",fontSize:"30px"}}>No Products in the Cart !</Alert>
+          <Alert severity="info" style={{alignItems:"center",fontSize:"30px"}}>No Products in the Cart !</Alert>
         </Stack>
       ) : (
         cartList.map((items) => <CartItem key={items.id} items={items} />)

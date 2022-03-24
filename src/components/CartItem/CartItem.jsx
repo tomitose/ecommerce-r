@@ -7,9 +7,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./CartItem.css";
+import { useCartContext } from "../../context/CartContext";
 
 
 const CartItem = ({ items }) => {
+
+  const{removeItem,clearCart} = useCartContext()
+
   return (
     <div className="cardContainer">
       <Card sx={{ maxWidth: 345 }}>
@@ -37,7 +41,7 @@ const CartItem = ({ items }) => {
           spacing={1}
         >
           <IconButton aria-label="delete" size="large">
-            <DeleteIcon fontSize="inherit" />
+            <DeleteIcon onClick={() => clearCart()} fontSize="inherit" />
           </IconButton>
         </Stack>
       </Card>

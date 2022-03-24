@@ -4,11 +4,12 @@ import TextField from '@mui/material/TextField';
 
 export default function Checkout() {
   return (
-    <Box
+    <div style={{minHeight:"100vh"}}>
+    <Box 
       sx={{
         width: 500,
         maxWidth: '100%',
-        marginTop: "20px",
+        marginTop: "100px",
         borderStyle: 'groove',
         display: 'inline-block',
         padding: '40px',
@@ -24,5 +25,6 @@ export default function Checkout() {
       <Button style={{marginTop:'20px'}} variant="contained" color='success' >Buy</Button>
 
     </Box>
+    </div>
   );
 }
