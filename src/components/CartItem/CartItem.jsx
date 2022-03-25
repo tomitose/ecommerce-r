@@ -14,6 +14,8 @@ const CartItem = ({ items }) => {
 
   const{removeItem} = useCartContext()
 
+  console.log(items)
+
   return (
     <div className="cardContainer">
       <Card sx={{ maxWidth: 345 }}>
@@ -28,7 +30,7 @@ const CartItem = ({ items }) => {
             {items.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Amount: {items.length}
+            Amount: {items.count}
           </Typography>
           <Typography variant="body3" color="text.secondary">
             Total price: ${items.price}

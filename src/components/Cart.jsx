@@ -17,7 +17,7 @@ const Cart = () => {
         cartList.map((items) => <CartItem key={items.id} items={items} />)
       )}
 
-      {cartList.length < 1 ? (<></>) : (<CartItemTotal/> )}
+      {cartList.length < 1 ? (<></>) : (<CartItemTotal data={cartList}/> )}
        
     </div>
   );
