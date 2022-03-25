@@ -23,7 +23,7 @@ const CartItem = ({ items }) => {
           component="img"
           height="140"
           image={items.img}
-          alt="green iguana"
+          alt="shoes"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -42,8 +42,8 @@ const CartItem = ({ items }) => {
           alignItems="center"
           spacing={1}
         >
-          <IconButton aria-label="delete" size="large">
-            <DeleteIcon onClick={() => removeItem(items.id)} fontSize="inherit" />
+          <IconButton onClick={() => removeItem(items.id)} aria-label="delete" size="large">
+            <DeleteIcon  fontSize="inherit" />
           </IconButton>
         </Stack>
       </Card>

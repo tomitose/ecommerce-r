@@ -1,18 +1,9 @@
-import React, { useEffect } from "react";
 import { MDBFooter } from "mdb-react-ui-kit";
 import "./Footer.css";
 
 
 export default function Footer() {
 
-    useEffect(() => {
-        setTimeout(() => {
-          Footer(false);
-        }, 2000);
-        return () => {
-          Footer(true);
-        };
-      }, []);
 
   return (
     <MDBFooter

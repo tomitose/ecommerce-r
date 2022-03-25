@@ -1,11 +1,13 @@
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, addDoc } from 'firebase/firestore';
 import { useState } from 'react';
 import db from '../components/services/firebase';
+import { useCartContext } from '../context/CartContext';
 
 const useFireStore = () => {
 
     const [product, setProduct] = useState([]);
     const [detailIndividual, setDetailIndividual] = useState ();
+    const {clearCart} = useCartContext()
 
 
     const getData = async () =>{
@@ -18,6 +20,19 @@ const useFireStore = () => {
         }
         catch (error) {
           console.log (error)
+        }
+      };
+
+      const addOrder = async (name, lastname, cel, adress, email) =>{
+        try {
+          const data = collection(db,"order")
+          await addDoc(data, {name, lastname, cel, adress, email, order: localStorage.getItem("cartList")})
+          console.log("INSERTADO")
+          clearCart()
+          return true
+        }
+        catch (error) {
+          return false
         }
       };
 
@@ -37,7 +52,8 @@ const useFireStore = () => {
       getData,
       product,
       getDataDetail,
-      detailIndividual      
+      detailIndividual,
+      addOrder   
   }
 }
 

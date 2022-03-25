@@ -38,11 +38,16 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
   return (
     <div className="ButtonAdd">
-      <Button variant="success" className="Decrement" onClick={() => decrement()}>-</Button>
-      <h3 type="number"  style={{ width: "40px"}}>
-        {contador}
-      </h3> 
-      <Button variant="success" onClick={() => counter()}>+</Button>
+      {
+        changeButton ? <></> : <div style={{display: "flex"}}>
+        <Button variant="success" className="Decrement" onClick={() => decrement()}>-</Button>
+        <h3 type="number"  style={{ width: "40px"}}>
+          {contador}
+        </h3> 
+        <Button variant="success" onClick={() => counter()}>+</Button>
+      </div>
+      }
+      
 
       { changeButton 
         ?  

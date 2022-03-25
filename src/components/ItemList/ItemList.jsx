@@ -5,7 +5,7 @@ import './ItemList.css';
 const ItemList = ({product}) => {
   return (
       
-    product.map(prod => <Item key={prod.id} prod={prod}/>)
+    product.length === 0 ? <>CARGANDO...</> : product.map(prod => <Item key={prod.id} prod={prod}/>)
     
   );
 };
