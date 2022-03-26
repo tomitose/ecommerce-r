@@ -53,23 +53,23 @@ export default function Checkout() {
       <Button disabled={sending} style={{marginTop:'20px'}} variant="contained" color='success' onClick={
         async ()=> {
           if(form.buyer.name === ""){
-            alert("El nombre no puede ser vacio");
+            alert("Add Name");
             return
           }
           if(form.buyer.lastname === ""){
-            alert("El nombre no puede ser vacio");
+            alert("Add Lastname");
             return
           }
           if(form.buyer.cel === ""){
-            alert("El nombre no puede ser vacio");
+            alert("Add Cel");
             return
           }
           if(form.buyer.adress === ""){
-            alert("El nombre no puede ser vacio");
+            alert("Add Adress");
             return
           }
           if(form.buyer.email === ""){
-            alert("El nombre no puede ser vacio");
+            alert("Add Email");
             return
           }
           setSending(true)
