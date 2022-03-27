@@ -19,7 +19,6 @@ const NavBar = () => {
       <NavbarCollapse>
         <Nav style={{alignItems:"center"}}>
           <Link to={"/"} className="Btn">Home</Link>
-          <Link className="Btn" to={"/deals"}>Today's Deal</Link>
         </Nav>
       </NavbarCollapse>
 
