@@ -20,10 +20,9 @@ const CheckoutLastCard = (form) => {
 
   
 
-  // setTimeout(() => {
-  //   window.location.replace("/");
-  // }, 3000);
-  console.log(idOrd)
+  setTimeout(() => {
+    window.location.replace("/");
+  }, 3000);
 
 
   return (
@@ -39,10 +38,6 @@ const CheckoutLastCard = (form) => {
           </Typography>
         </CardContent>
       </Card>
-
-      
-      <p> {idOrd} </p>
-
     </div>
   );
 };
