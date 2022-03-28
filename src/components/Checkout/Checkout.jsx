@@ -7,7 +7,7 @@ import useFireStore from "../../hooks/useFireStore";
 import CheckoutLastCard from "./CheckoutLastCard/CheckoutLastCard";
 
 export default function Checkout() {
-  const { addOrder } = useFireStore();
+  const { addOrder} = useFireStore();
   const [sending, setSending] = useState(false);
   const [form, setForm] = useState({
     buyer: {
@@ -125,7 +125,7 @@ export default function Checkout() {
                 form.buyer.email
               );
               if (inserted) {
-                return <CheckoutLastCard />;
+                return <CheckoutLastCard form={form}/>;
               } else {
                 alert("Error");
               }

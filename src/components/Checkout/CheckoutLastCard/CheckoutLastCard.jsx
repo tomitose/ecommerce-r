@@ -1,12 +1,31 @@
 import { CardContent, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { Checkmark } from "react-checkmark";
 import { Card } from "react-bootstrap";
+import useFireStore from "../../../hooks/useFireStore";
 
-const CheckoutLastCard = ({order}) => {
-  setTimeout(() => {
-    window.location.replace("/");
-  }, 3000);
+const CheckoutLastCard = (form) => {
+
+  useEffect(()=>{
+    submit()
+   
+  }, [])
+
+
+  const { generateOrder,idOrd} = useFireStore();
+
+  function submit () {
+    generateOrder({datos:form})
+  }
+
+  
+
+  // setTimeout(() => {
+  //   window.location.replace("/");
+  // }, 3000);
+  console.log(idOrd)
+
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <Card className="CardTotal" sx={{ minWidth: 275 }}>
@@ -16,10 +35,14 @@ const CheckoutLastCard = ({order}) => {
           </Typography>
           <Checkmark size="medium" />
           <Typography gutterBottom variant="h5" component="div">
-            Your Order {order.order} has been done succesfully
+            Your Order {idOrd} has been done succesfully
           </Typography>
         </CardContent>
       </Card>
+
+      
+      <p> {idOrd} </p>
+
     </div>
   );
 };

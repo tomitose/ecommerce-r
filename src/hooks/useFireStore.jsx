@@ -5,6 +5,8 @@ import { useCartContext } from "../context/CartContext";
 
 const useFireStore = () => {
   const [product, setProduct] = useState([]);
+  const [idOrd, setIdOrd] = useState()
+
   const [detailIndividual, setDetailIndividual] = useState();
   const { clearCart } = useCartContext();
 
@@ -21,6 +23,20 @@ const useFireStore = () => {
       console.log(error);
     }
   };
+
+
+  const generateOrder = async ({datos}) => {
+    try {
+      const col = collection(db, "order");
+      const order = await addDoc(col, datos);
+      setIdOrd(order.id);
+    }catch(error){
+      console.log(error);
+    }
+  };
+
+
+
 
   const addOrder = async (name, lastname, cel, adress, email) => {
     try {
@@ -41,6 +57,7 @@ const useFireStore = () => {
     }
   };
 
+
   const getDataDetail = async (id) => {
     try {
       const document = doc(db, "items", id);
@@ -58,6 +75,8 @@ const useFireStore = () => {
     getDataDetail,
     detailIndividual,
     addOrder,
+    generateOrder,
+    idOrd
   };
 };
 
