@@ -1,9 +1,9 @@
 import { CardContent, Typography } from "@mui/material";
 import React from "react";
-import { Checkmark } from 'react-checkmark';
+import { Checkmark } from "react-checkmark";
 import { Card } from "react-bootstrap";
 
-const CheckoutLastCard = () => {
+const CheckoutLastCard = ({order}) => {
   setTimeout(() => {
     window.location.replace("/");
   }, 3000);
@@ -14,9 +14,9 @@ const CheckoutLastCard = () => {
           <Typography gutterBottom variant="h4" component="div">
             Checkout
           </Typography>
-          <Checkmark size='medium' />
+          <Checkmark size="medium" />
           <Typography gutterBottom variant="h5" component="div">
-            Your Order has been done succesfully
+            Your Order {order.order} has been done succesfully
           </Typography>
         </CardContent>
       </Card>
@@ -25,9 +25,3 @@ const CheckoutLastCard = () => {
 };
 
 export default CheckoutLastCard;
-
-
-
-
-
-

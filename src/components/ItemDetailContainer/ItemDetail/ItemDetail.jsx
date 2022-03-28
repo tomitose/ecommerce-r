@@ -37,11 +37,14 @@ const ItemDetail = ({ detail }) => {
         style={{ alignItems: "center", marginTop: "20px" }}
       >
         {loading ? (
-         <div className="text-center" style={{ marginLeft: "150px",marginRight: "150px" }}>
-         <div className="spinner-border text-success" role="status">
-           <span className="visually-hidden">Loading...</span>
-         </div>
-       </div>
+          <div
+            className="text-center"
+            style={{ marginLeft: "150px", marginRight: "150px" }}
+          >
+            <div className="spinner-border text-success" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          </div>
         ) : (
           <Card.Img src={detail.img} className="CardImage" />
         )}

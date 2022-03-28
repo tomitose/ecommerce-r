@@ -89,51 +89,50 @@ export default function Checkout() {
           label="E-mail:"
         />
         <Link to={"/checkoutcard"}>
-        <Button
-          disabled={sending}
-          style={{ marginTop: "20px" }}
-          variant="contained"
-          color="success"
-          onClick={async () => {
-            if (form.buyer.name === "") {
-              alert("Add Name");
-              return;
-            }
-            if (form.buyer.lastname === "") {
-              alert("Add Lastname");
-              return;
-            }
-            if (form.buyer.cel === "") {
-              alert("Add Cel");
-              return;
-            }
-            if (form.buyer.adress === "") {
-              alert("Add Adress");
-              return;
-            }
-            if (form.buyer.email === "") {
-              alert("Add Email");
-              return;
-            }
+          <Button
+            disabled={sending}
+            style={{ marginTop: "20px" }}
+            variant="contained"
+            color="success"
+            onClick={async () => {
+              if (form.buyer.name === "") {
+                alert("Add Name");
+                return;
+              }
+              if (form.buyer.lastname === "") {
+                alert("Add Lastname");
+                return;
+              }
+              if (form.buyer.cel === "") {
+                alert("Add Cel");
+                return;
+              }
+              if (form.buyer.adress === "") {
+                alert("Add Adress");
+                return;
+              }
+              if (form.buyer.email === "") {
+                alert("Add Email");
+                return;
+              }
 
-            setSending(true);
-            let inserted = await addOrder(
-              form.buyer.name,
-              form.buyer.lastname,
-              form.buyer.cel,
-              form.buyer.adress,
-              form.buyer.email
-            );
-            if (inserted) {
-              return <CheckoutLastCard/>
-
-            } else {
-              alert("Error");
-            }
-          }}
-        >
-          Buy
-        </Button>
+              setSending(true);
+              let inserted = await addOrder(
+                form.buyer.name,
+                form.buyer.lastname,
+                form.buyer.cel,
+                form.buyer.adress,
+                form.buyer.email
+              );
+              if (inserted) {
+                return <CheckoutLastCard />;
+              } else {
+                alert("Error");
+              }
+            }}
+          >
+            Buy
+          </Button>
         </Link>
       </Box>
     </div>

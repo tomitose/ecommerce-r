@@ -5,12 +5,17 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./CartItemTotal.css";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../../context/CartContext";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function CartItemTotal(data) {
-  let total = 0
-  data.data.forEach(e => {
-    total += e.count * e.price
+  let total = 0;
+  data.data.forEach((e) => {
+    total += e.count * e.price;
   });
+
+  const { clearCart } = useCartContext();
+
   return (
     <Card className="CardTotal" sx={{ minWidth: 275 }}>
       <CardContent>
@@ -18,7 +23,7 @@ export default function CartItemTotal(data) {
           Total: $ {total}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className="BtnContainer">
         <Link to={"/checkout"}>
           <Button
             style={{ marginTop: "20px" }}
@@ -28,6 +33,18 @@ export default function CartItemTotal(data) {
             Make order
           </Button>
         </Link>
+        <Button
+          color="warning"
+          style={{
+            color: "white",
+            backgroundColor: "#e60000",
+            marginTop: "20px",
+          }}
+          onClick={() => clearCart()}
+        >
+          Delete Cart
+          <DeleteIcon style={{ fontSize: "x-large" }} />
+        </Button>
       </CardActions>
     </Card>
   );

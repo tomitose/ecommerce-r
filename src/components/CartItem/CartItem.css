@@ -1,27 +1,22 @@
 .cardContainer {
-    margin: 20px;
+  margin: 20px;
 }
 
-
 .cardAmount {
-    font-size: large;
+  font-size: large;
 }
 
 .cardTotal {
-    font-size: large;
+  font-size: large;
 }
 
-
-
-.trashButton{
-    display: flex;
-    justify-content: flex-end;
+.trashButton {
+  display: flex;
+  justify-content: flex-end;
 }
 
-
-
-@media (max-width: 540px){
-    .cardContainer {
-        text-align: -webkit-center;
-    }
+@media (max-width: 540px) {
+  .cardContainer {
+    text-align: -webkit-center;
+  }
 }

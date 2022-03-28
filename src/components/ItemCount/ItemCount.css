@@ -1,21 +1,21 @@
 .btn {
-    padding: 2px;
-    height: fit-content;
+  padding: 2px;
+  height: fit-content;
 }
 
 .ButtonAdd {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    height: 36px;
-    margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  margin-top: 7px;
 }
 
-.Decrement{
-    width: 16px;
+.Decrement {
+  width: 16px;
 }
 
 .card-text {
-    padding-left: 0;
+  padding-left: 0;
 }

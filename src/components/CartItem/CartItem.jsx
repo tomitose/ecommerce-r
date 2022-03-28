@@ -9,22 +9,15 @@ import Typography from "@mui/material/Typography";
 import "./CartItem.css";
 import { useCartContext } from "../../context/CartContext";
 
-
 const CartItem = ({ items }) => {
+  const { removeItem } = useCartContext();
 
-  const{removeItem} = useCartContext()
-
-  console.log(items)
+  console.log(items);
 
   return (
     <div className="cardContainer">
       <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={items.img}
-          alt="shoes"
-        />
+        <CardMedia component="img" height="140" image={items.img} alt="shoes" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {items.name}
@@ -42,12 +35,15 @@ const CartItem = ({ items }) => {
           alignItems="center"
           spacing={1}
         >
-          <IconButton onClick={() => removeItem(items.id)} aria-label="delete" size="large">
-            <DeleteIcon  fontSize="inherit" />
+          <IconButton
+            onClick={() => removeItem(items.id)}
+            aria-label="delete"
+            size="large"
+          >
+            <DeleteIcon fontSize="inherit" />
           </IconButton>
         </Stack>
       </Card>
-
     </div>
   );
 };

@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;1,200;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;1,200;1,700&display=swap");
 
 * {
-  font-family:'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;1,200;1,700&display=swap';
+  font-family: "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;1,200;1,700&display=swap";
 }
 
 .App {
@@ -17,9 +16,7 @@
 
 .CartLogo {
   margin-right: 10px;
-
 }
-
 
 .App-link {
   color: #61dafb;
@@ -34,19 +31,12 @@
   }
 }
 
-
-
-
 /* CARD */
 
-.card-text{
-    text-align: initial;
-    padding-left: 20px;
+.card-text {
+  text-align: initial;
+  padding-left: 20px;
 }
-
-
-
-
 
 /*
 Media-Query

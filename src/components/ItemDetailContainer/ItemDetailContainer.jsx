@@ -4,22 +4,17 @@ import ItemDetail from "./ItemDetail/ItemDetail";
 import useFireStore from "../../hooks/useFireStore";
 
 const ItemDetailContainer = () => {
+  const { productId } = useParams();
 
-    const {productId} = useParams();
-
-    const {detailIndividual, getDataDetail} = useFireStore ();
+  const { detailIndividual, getDataDetail } = useFireStore();
 
   useEffect(() => {
-
-  getDataDetail (productId)
-
-  },[productId]);
-
-
+    getDataDetail(productId);
+  }, [productId]);
 
   return (
-    <div style={{minHeight:"100vh"}}>
-      {detailIndividual&&<ItemDetail detail={detailIndividual} />}
+    <div style={{ minHeight: "100vh" }}>
+      {detailIndividual && <ItemDetail detail={detailIndividual} />}
     </div>
   );
 };

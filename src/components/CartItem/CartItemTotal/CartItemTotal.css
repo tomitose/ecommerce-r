@@ -1,7 +1,15 @@
-.CardTotal{
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
+.CardTotal {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
 }
+
+.BtnContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+

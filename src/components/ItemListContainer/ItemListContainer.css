@@ -1,8 +1,7 @@
-.Card-Item-List-Container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 70px;
-};
-
+.Card-Item-List-Container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 70px;
+}

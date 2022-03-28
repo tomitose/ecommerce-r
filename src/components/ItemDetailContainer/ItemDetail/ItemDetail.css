@@ -1,32 +1,31 @@
 .CardImage {
-    width: 500px;
+  width: 500px;
 }
 
 .CardItems {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: stretch;
-    padding-right: 0;
-    margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+  padding-right: 0;
+  margin-right: 5px;
 }
 
-.cardCustom{
-    flex-direction: row;
-
+.cardCustom {
+  flex-direction: row;
 }
 
 @media (max-width: 700px) {
-    .CardImage {
-      width: 300px;
-      margin-top: 20px;
-    }
+  .CardImage {
+    width: 300px;
+    margin-top: 20px;
+  }
 
-    .card-bordy{
-        padding: 1rem;
-    }
-    .cardCustom{
-        flex-direction: column;
-    }
+  .card-bordy {
+    padding: 1rem;
+  }
+  .cardCustom {
+    flex-direction: column;
+  }
 }
