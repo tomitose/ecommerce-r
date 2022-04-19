@@ -94,25 +94,30 @@ export default function Checkout() {
             style={{ marginTop: "20px" }}
             variant="contained"
             color="success"
-            onClick={async () => {
+            onClick={async (e) => {
               if (form.buyer.name === "") {
                 alert("Add Name");
+                e.preventDefault();
                 return;
               }
               if (form.buyer.lastname === "") {
                 alert("Add Lastname");
+                e.preventDefault();
                 return;
               }
               if (form.buyer.cel === "") {
                 alert("Add Cel");
+                e.preventDefault();
                 return;
               }
               if (form.buyer.adress === "") {
                 alert("Add Adress");
+                e.preventDefault();
                 return;
               }
               if (form.buyer.email === "") {
                 alert("Add Email");
+                e.preventDefault();
                 return;
               }
 

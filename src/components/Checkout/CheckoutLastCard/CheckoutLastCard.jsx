@@ -22,7 +22,7 @@ const CheckoutLastCard = (form) => {
 
   setTimeout(() => {
     window.location.replace("/");
-  }, 3000);
+  }, 4000);
 
 
   return (
