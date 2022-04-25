@@ -10,14 +10,16 @@ const useFireStore = () => {
   const [detailIndividual, setDetailIndividual] = useState();
   const { clearCart } = useCartContext();
 
-  const getData = async () => {
+  const getData = async (categoryId=null) => {
     try {
       const data = collection(db, "items");
       const col = await getDocs(data);
-      const result = col.docs.map(
+      let result = col.docs.map(
         (doc) => (doc = { id: doc.id, ...doc.data() })
       );
-
+      if(categoryId){
+        result = result.filter(e => e.category === categoryId)
+      }
       return setProduct(result);
     } catch (error) {
       console.log(error);
