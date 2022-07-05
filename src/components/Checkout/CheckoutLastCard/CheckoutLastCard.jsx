@@ -1,8 +1,9 @@
 import { CardContent, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { Checkmark } from "react-checkmark";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import useFireStore from "../../../hooks/useFireStore";
+import { Link } from "react-router-dom";
 
 const CheckoutLastCard = (form) => {
 
@@ -20,10 +21,6 @@ const CheckoutLastCard = (form) => {
 
   
 
-  setTimeout(() => {
-    window.location.replace("/");
-  }, 4000);
-
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -37,6 +34,9 @@ const CheckoutLastCard = (form) => {
             Your Order {idOrd} has been done succesfully
           </Typography>
         </CardContent>
+        <Link to="/">
+          <Button className="m-5 p-2">Go back to buy !</Button>
+        </Link>
       </Card>
     </div>
   );
